@@ -1,0 +1,18 @@
+ul {
+    list-style-type: none;
+}
+
+ul > li {
+    margin: .5rem;
+    padding: .5rem;
+    box-sizing: border-box;
+    box-shadow: 0 5px 10px;
+    transition: transform .5s, background-color 1s;
+    width: 30rem;
+}
+
+li:hover {
+    cursor: pointer;
+    transform: translateY(4px);
+    background-color: rgba(170, 184, 226, 0.767);
+}

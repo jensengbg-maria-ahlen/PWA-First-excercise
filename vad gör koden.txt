@@ -1,0 +1,70 @@
+" citattecken, quotes "
+' apostrof, single quotes '
+` grav accent ` (template strings)
+´ akut accent ´ (används inte till strängar)
+* asterisk * 
+( parentes, parenthesis/brackets/braces )
+[ hakparentes, square brackets ]
+{ måsvingar/blockparentes, curly braces }
+
+
+
+
+//Returnerar första objekt efter egenskap.
+let a = items.find(mystery => mystery.name == 'Map');    
+
+
+//Returnerar alla objekten efter vald egenskap
+let b = items.map(mystery => mystery.name);     
+
+
+//Första värdet som saknar description
+let c = items.find(mystery => mystery.description == '');  
+
+
+//Reducerar en array till ett värde. Lägger ihop alla koder till en sträng. 
+let d = items.reduce((acc, cur) => acc + '\n' + cur.code);    
+
+
+//... kallas "spread operator". Skapar en ny lista med objekt som har allt som fanns i den ursprungliga listan, men en extra egenskap
+let e = items.map(mystery => ({ ...mystery, category: 'general' }));
+
+
+//Skapar en ny array som behåller alla värden där det returnerar true
+let f = items.filter(mystery => mystery.description != '');     
+
+
+//Returnerar alla namnen med första bokstaven som börjar efter M i alfabetet
+let g = items.filter(mystery => {
+	if (mystery.name == '') {
+		return true;
+	} else {
+		const c = mystery.name[0].toUpperCase();
+		return c > 'M';
+	}
+});    
+
+
+//Tar bort elementet med id == 3 från arrayen
+const remove = 3;
+let h = items.filter(mystery => mystery.id != remove );
+console.log('h: ', h);      
+
+
+
+
+const list = [1, 2, 3, 5, 8, 13, 21];
+
+//Får ut längden på arrayen
+let i = list.length;
+console.log('i: ', i);
+
+
+//Får ut
+let j = list[0] + list[list.length-1];
+console.log('j: ', j); 
+
+
+//Får ut
+let k = [...list, 34].length
+console.log('k: ', k);
