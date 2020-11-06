@@ -1,3 +1,12 @@
+if ('serviceWorker' in navigator) {
+	// Assumes your service worker has file name "sw.js"
+    navigator.serviceWorker.register('sw.js')
+    .then(reg => {
+        console.log('Registration succeeded. Scope is ' + reg.scope);
+    });
+}
+
+
 const items = [
 	{
         name: 'Array length',
@@ -119,21 +128,10 @@ function allItems() {
         let liElem = document.createElement("li")
         liElem.innerHTML +=
             '<h2>' + value.name + '</h2>' +
-            '<h4>' + value.description + '</h4>' + 
+            '<p>' + value.description + '</p>' + 
             '<code>' + value.code + '</code>'
         ulElem.appendChild(liElem);
     }
 }
 
 allItems();
-
-
-
-
-if ('serviceWorker' in navigator) {
-	// Assumes your service worker has file name "sw.js"
-    navigator.serviceWorker.register('sw.js')
-    .then(reg => {
-        console.log('Registration succeeded. Scope is ' + reg.scope);
-    });
-}

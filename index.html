@@ -3,7 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Första övning PWA</title>
+        <meta name="Description" content="This is my first PWA">
+        <title>Progressive Web App Start</title>
+        <link rel="shortcut icon" href="img/Icon1.png" type="image/x-icon">
         <link rel="stylesheet" href="css/style.css">
         <link rel="manifest" href="manifest.webmanifest">
     </head>
@@ -16,10 +18,23 @@
             </ul>
         </article>
         <section>
-            <input type="text" placeholder="name">
-            <input type="text" placeholder="description">
-            <input type="text" placeholder="category">
-            <input type="text" placeholder="code">
+            <label for="">
+                Name
+                <input type="text" id="name">
+            </label>
+            <label for="">
+                Description
+                <input type="text" id="description">
+            </label>
+            <label for="">
+                Category
+                <input type="text" id="category">
+            </label>
+            <label for="">
+                Code
+                <input type="text" id="code">
+            </label>
+
             <button>Add to list</button>
         </section>
         
