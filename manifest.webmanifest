@@ -3,6 +3,8 @@
     "short_name": "PWA-Start",
     "description": "De första övningarna för att skapa en PWA",
     "display": "standalone",
+    "background_color": "#8fabff",
+    "theme_color": "#8fabff",
     "start_url": "/app",
     "icons": [{
         "src": "img/Icon1.png",
