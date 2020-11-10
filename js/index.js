@@ -1,5 +1,4 @@
 if ('serviceWorker' in navigator) {
-	// Assumes your service worker has file name "sw.js"
     navigator.serviceWorker.register('sw.js')
     .then(reg => {
         console.log('Registration succeeded. Scope is ' + reg.scope);
@@ -119,8 +118,15 @@ const items = [
     }
 ]
 
+const addButton = document.getElementById('addButton');
+const inputName = document.getElementById('name');
+const inputDescription = document.getElementById('description');
+const inputCategory = document.getElementById('category');
+const inputCode = document.getElementById('code');
 
-function allItems() {
+
+
+function allItems(value) {
     let ulElem = document.getElementById('list');
     let values = items;
 
@@ -131,7 +137,24 @@ function allItems() {
             '<p>' + value.description + '</p>' + 
             '<code>' + value.code + '</code>'
         ulElem.appendChild(liElem);
+
+        //xxx.splice()
     }
 }
 
+
+function addItemToList() {
+    addButton.addEventListener('click', () => {
+        let newItem = {
+            name: inputName.value,
+            description: inputDescription.value,
+            category: inputCategory.value,
+            code: inputCode.value
+        }
+        items.push(newItem);
+        allItems();
+    });
+}
+
+addItemToList();
 allItems();
