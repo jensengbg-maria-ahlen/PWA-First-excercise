@@ -118,13 +118,6 @@ const items = [
     }
 ]
 
-const addButton = document.getElementById('addButton');
-const inputName = document.getElementById('name');
-const inputDescription = document.getElementById('description');
-const inputCategory = document.getElementById('category');
-const inputCode = document.getElementById('code');
-
-
 
 function allItems(value) {
     let ulElem = document.getElementById('list');
@@ -144,6 +137,12 @@ function allItems(value) {
 
 
 function addItemToList() {
+    const addButton = document.getElementById('addButton');
+    const inputName = document.getElementById('name');
+    const inputDescription = document.getElementById('description');
+    const inputCategory = document.getElementById('category');
+    const inputCode = document.getElementById('code');
+
     addButton.addEventListener('click', () => {
         let newItem = {
             name: inputName.value,
